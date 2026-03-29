@@ -1,125 +1,103 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+/* BODY & CARD */
+body{
+  margin:0;
+  background:#eee;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
 }
 
-/* Card with background image */
-.card {
-  position: relative;
-  width: 95vw;
-  max-width: 420px; 
-  aspect-ratio: 9 / 16;
-  background: url('background.jpg') no-repeat center/cover;
-  font-family: 'Noto Serif Telugu', serif;
+.card{
+  width:95vw;
+  max-width:420px;
+  aspect-ratio:9/16;
+  background:url('background.jpg') no-repeat center/cover;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
 }
 
-/* Centered content */
-.content {
-  position: absolute;
-  top: 18%;
-  left: 10%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+/* COMMON BUTTON STYLE */
+.button{
+  position:absolute;
+  background: rgba(255,255,255,0.6);
+  padding:4px 10px;
+  border-radius:6px;
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+  transition: background 0.3s;
 }
 
-/* Invitation text */
-.title {
-  font-size: 4.5vw;
-  font-weight: bold;
-  color: #8B0000;
-  margin-bottom: 6px;
+.button:hover{
+  background: rgba(255,255,255,0.9);
 }
 
-.subtitle {
-  font-size: 3.8vw;
-  color: #a52a2a;
-  margin-bottom: 14px;
+/* WEDDING BUTTON */
+.wedding-btn{
+  top:43%;
+  left:30%;
+  font-size:16px;
 }
 
-.names {
-  font-size: 6vw;
-  font-weight: bold;
-  color: #b22222;
-  margin-bottom: 18px;
+/* WEDDING LOCATION BUTTON */
+.wedding-location-btn{
+  top:43.5%;
+  left:57%;
+  font-size:12px;
 }
 
-/* Event buttons (Marriage / Reception) */
-.event-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  text-decoration: none;
-  background: rgba(255 255 255 / 0.8);
-  border-radius: 12px;
-  padding: 12px 25px;
-  font-weight: 600;
-  color: #8b0000;
-  box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* RECEPTION BUTTON */
+.reception-btn{
+  top:55.5%;
+  left:28%;
+  font-size:16px;
 }
 
-.event-button:hover,
-.event-button:focus {
-  background-color: #f5b8c1;
-  color: #4d3a25;
-  outline: none;
+/* RECEPTION LOCATION BUTTON */
+.reception-location-btn{
+  top:56%;
+  left:58%;
+  font-size:12px;
 }
 
-.event-name {
-  font-size: 2.2rem;
-  margin-bottom: 4px;
-}
-
-.event-date {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Language buttons */
+/* LANGUAGE BUTTONS */
 .language-buttons {
-  margin-top: 24px;
+  position: absolute;
+  top:67%;  /* adjust to place below Reception buttons */
+  left:50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 15px;
 }
 
 .lang-btn {
-  display: inline-block;
-  background: rgba(255 255 255 / 0.8);
-  border-radius: 12px;
-  padding: 10px 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #8b0000;
+  background: rgba(255,255,255,0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
   text-decoration: none;
-  box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #200;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
 }
 
-.lang-btn:hover,
-.lang-btn:focus {
-  background-color: #f5b8c1;
-  color: #4d3a25;
-  outline: none;
+.lang-btn:hover{
+  background: rgba(255,255,255,0.9);
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  .title { font-size: 22px; }
-  .subtitle { font-size: 18px; }
-  .names { font-size: 28px; }
-  .event-name { font-size: 24px; }
-  .event-date { font-size: 22px; }
-  .event-button { padding: 14px 30px; }
-  .lang-btn { font-size: 1.1rem; padding: 12px 28px; }
+/* MUSIC BUTTON */
+.music-btn{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  background:#ffffffaa;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
 }
