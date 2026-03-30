@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <title>Wedding Invitation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="card" id="card">
 
-<div class="card">
+    <!-- COMBINED WEDDING BUTTON -->
+    <a href="https://maps.app.goo.gl/iG7y59KC2WTmziNTA" target="_blank" class="button combined-btn" id="wedBtn">
+      <span class="btn-text">WEDDING</span>
+      <span class="btn-text">Venue</span>
+    </a>
 
-  <!-- WEDDING -->
-  <a href="https://maps.app.goo.gl/moSaXavQjQoscHsr7" target="_blank" class="button wedding-btn">WEDDING</a>
-  <a href="https://maps.app.goo.gl/moSaXavQjQoscHsr7" target="_blank" class="button wedding-location-btn">Location</a>
+    <!-- COMBINED RECEPTION BUTTON -->
+    <a href="https://maps.app.goo.gl/4SgQrND5e6kxksRu7" target="_blank" class="button combined-btn" id="recBtn">
+      <span class="btn-text">RECEPTION</span>
+      <span class="btn-text">Venue</span>
+    </a>
 
-  <!-- RECEPTION -->
-  <a href="https://maps.app.goo.gl/4SgQrND5e6kxksRu7" target="_blank" class="button reception-btn">RECEPTION</a>
-  <a href="https://maps.app.goo.gl/4SgQrND5e6kxksRu7" target="_blank" class="button reception-location-btn">Location</a>
+    <!-- LANGUAGE BUTTONS -->
+    <div class="language-buttons">
+      <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</button>
+      <button class="lang-btn" id="btn-hi" onclick="setLanguage('hi')">हिंदी</button>
+      <button class="lang-btn" id="btn-te" onclick="setLanguage('te')">తెలుగు</button>
+    </div>
 
-  <!-- Language selection buttons -->
-      <div class="language-buttons">
-        <a href="hindi.html" class="lang-btn">हिंदी</a>
-        <a href="telugu.html" class="lang-btn">తెలుగు</a>
-	</div>
+    <!-- MUSIC -->
+    <audio id="bgMusic" autoplay loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
 
-  <!-- MUSIC -->
-  <audio id="bgMusic" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
+    <div class="music-btn" onclick="toggleMusic()">🔊</div>
 
-  <!-- Music toggle button -->
-  <div class="music-btn" onclick="toggleMusic()">🔊</div>
+  </div>
 
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
