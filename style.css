@@ -1,103 +1,92 @@
-/* BODY & CARD */
-body{
-  margin:0;
-  background:#eee;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
+/* BODY */
+body {
+  margin: 0;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
 }
 
-.card{
-  width:95vw;
-  max-width:420px;
-  aspect-ratio:9/16;
-  background:url('background.jpg') no-repeat center/cover;
-  border-radius:20px;
-  overflow:hidden;
-  position:relative;
+/* CARD */
+.card {
+  width: 95vw;
+  max-width: 420px;
+  aspect-ratio: 9 / 16;
+  background: url('bg-en.jpg') no-repeat center/cover;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: background-image 0.5s ease-in-out;
 }
 
-/* COMMON BUTTON STYLE */
-.button{
-  position:absolute;
-  background: rgba(255,255,255,0.6);
-  padding:4px 10px;
-  border-radius:6px;
-  text-decoration:none;
-  color:#000;
-  font-weight:600;
+/* BUTTONS (combined and language) */
+.combined-btn,
+.lang-btn {
+  background: rgba(255, 255, 255, 0.7); /* same as language button */
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px; /* same as language buttons */
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
   transition: background 0.3s;
+  white-space: nowrap;
 }
 
-.button:hover{
-  background: rgba(255,255,255,0.9);
+.combined-btn:hover,
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.95); /* highlight effect */
 }
 
-/* WEDDING BUTTON */
-.wedding-btn{
-  top:43%;
-  left:30%;
-  font-size:16px;
+.combined-btn .btn-text {
+  white-space: nowrap;
 }
 
-/* WEDDING LOCATION BUTTON */
-.wedding-location-btn{
-  top:43.5%;
-  left:57%;
-  font-size:12px;
+/* WEDDING button position */
+#wedBtn {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* RECEPTION BUTTON */
-.reception-btn{
-  top:55.5%;
-  left:28%;
-  font-size:16px;
-}
-
-/* RECEPTION LOCATION BUTTON */
-.reception-location-btn{
-  top:56%;
-  left:58%;
-  font-size:12px;
+/* RECEPTION button position */
+#recBtn {
+  position: absolute;
+  top: 55.5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* LANGUAGE BUTTONS */
 .language-buttons {
   position: absolute;
-  top:67%;  /* adjust to place below Reception buttons */
-  left:50%;
+  top: 67%;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 15px;
-}
-
-.lang-btn {
-  background: rgba(255,255,255,0.6);
-  padding: 6px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #200;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 0.3s;
-}
-
-.lang-btn:hover{
-  background: rgba(255,255,255,0.9);
+  gap: 10px;
 }
 
 /* MUSIC BUTTON */
-.music-btn{
-  position:absolute;
-  bottom:15px;
-  right:15px;
-  background:#ffffffaa;
-  border-radius:50%;
-  width:40px;
-  height:40px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
+.music-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #ffffffaa;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
